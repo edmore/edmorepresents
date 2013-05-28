@@ -37,8 +37,8 @@
         <section>
         <section>
           <h1>
-         <span style="color:white">Neuro</span>
-         <span style="color: #8b743d">evolution</span>?
+         <span style="color:white; opacity:0.4">Neuro</span>
+         <span style="color: #8b743d">evolution</span>
          </h1>
         </section>
         <section>
@@ -58,12 +58,13 @@
 <img src="images/genetic_algorithm.png">
 </section>
         </section>
+
 <!-- Neural Networks  -->
         <section>
         <section>
           <h1>
          <span style="color:#8b743d">Neuro</span>
-         <span style="color:white">evolution</span>?
+         <span style="color:white; opacity:0.4">evolution</span>
          </h1>
         </section>
         <section>
@@ -80,22 +81,35 @@ data.</blockquote>
         </section>
         <section>
         <h2>Perceptrons</h2>
-        </section>
-        <section>
-        <h2>Why are Neural Networks important?</h2>
+<ul>
+<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">The simplest neural network possible is a computational model of a single neuron called a perceptron.</span></h3>
+<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A perceptron can only solve linearly seperable problems e.g. cannot solve XOR.</span></h3>
+    </ul>
+    </section>
 
+<section>
+        <h2>Multi-layered Perceptrons</h2>
+<ul>
+<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A multi-layered perceptron is a network of perceptrons. </span></h3>
+<center><img src="images/ann.svg" class="fragment"></img></center>
+<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">It can learn to solve more complicated problems</span></h3>
+    </ul>
+    </section>
+
+        <section>
+        <h2>The key element of Neural Networks ?</h2>
             <h3 class="fragment"><span style="color:white; background-color:black">They have the ability to learn</span></h3>
 
         </section>
         <section>
         <h2>Classes of Learning Systems</h2>
-            <h3 class="fragment"><span style="color:white; background-color:black">UnSupervised Learning</span></h3>
-            <h3 class="fragment"><span style="color:white; background-color:black">Supervised Learning</span></h3>
-            <h3 class="fragment"><span style="color:white; background-color:black">Reinforcement Learning</span></h3>
-
+            <h3 class="fragment"><span style="color:white; background-color:black">Supervised Learning</span></h3><br>
+            <h3 class="fragment"><span style="color:white; background-color:black">UnSupervised Learning</span></h3><br>
+            <h3 class="fragment"><span style="color:white; background-color:black">Reinforcement Learning</span></h3><br>
         </section>
         <section>
         <h2>Reinforcement Learning Systems</h2>
+        <blockquote>Reinforcement learning is learning what to do--how to map situations to actions--so as to maximize a numerical reward signal.</blockquote>
         <img src="images/mouse_in_maze.jpg"></img>
         </section>
         </section>
@@ -116,10 +130,23 @@ task</blockquote>
 
 <section>
 <h2>Examples of NE methods</h2>
+<ul>
+<h3 class="fragment"><span style="color:white; background-color:black">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Enforced Sub-populations (ESP)</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Neuroevolution Augmenting Topologies (NEAT)</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Potter and De Jong</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Multi-Component ESP</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">... and many more</span></h3>
+</ul>
 </section>
 
 <section>
-<h2>Population based NE methods</h2>
+<h2>Examples of population based NE methods</h2>
+<ul>
+<h3 class="fragment"><span style="color:white; background-color:black">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Enforced Sub-populations (ESP)</span></h3>
+<h3 class="fragment"><span style="color:white; background-color:black">Potter and De Jong</span></h3>
+</ul>
 </section>
 
 <section>
@@ -130,13 +157,44 @@ task</blockquote>
 </section>
 
 <section>
+
 <section>
 <h1>Core Architectures</h1>
+<ul>
+            <h2 class="fragment"><span style="color:white; background-color:black">Parallelism</span></h3>
+<br>
+            <h2 class="fragment"><span style="color:white; background-color:black">Concurrency</span></h3>
+
+</ul>
+</section>
+
+<section>
+<h1>Parallelism</h1>
+<ul>
             <h2 class="fragment"><span style="color:white; background-color:black">Multi-core</span></h3>
 <br>
             <h2 class="fragment"><span style="color:white; background-color:black">Many-core</span></h3>
-<br>
-<h2 class="fragment"><span style="color:white; background-color:black">Parallelism</span></h3>
+
+</ul>
+</section>
+
+<section>
+<h1>Multi-core</h1>
+<ul>
+</ul>
+</section>
+
+<section>
+<h1>Many-core</h1>
+<ul>
+</ul>
+</section>
+
+<section>
+<h1>Concurrency</h1>
+<ul>
+<img src="images/gopher.png"></img>
+</ul>
 </section>
 
 
@@ -180,7 +238,11 @@ task</blockquote>
           <li>http://www.ironammonite.com/2011/05/top-5-evolution-in-minute-videos-on-tv_19.html</li>
 <li>http://natureofcode.com/book/</li>
 <li>http://www.nextnature.net/2010/01/as-smart-as-mice/</li>
-        </ul>
+<li>http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node7.html</li>
+<li>http://en.wikipedia.org/wiki/File:Neural_network_example.svg</li>
+<li>http://www.cs.utexas.edu/users/nn/pages/research/neuroevolution.html</li>
+        <li>http://tip.golang.org/doc/gopher/</li>
+</ul>
         </section>
 
         <section>
@@ -207,7 +269,6 @@ task</blockquote>
 				controls: true,
 				progress: true,
 				history: true,
-
 				transition: 'zoom'
 			});
 
