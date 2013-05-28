@@ -1,302 +1,374 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Accelerated Neuroevolution on Core Architectures</title>
+    <title>Accelerated Neuroevolution on Core Architectures</title>
 
-		<meta name="description" content="Neuroevolution, Multi-core, Many-core, GPU">
-		<meta name="author" content="Edmore Moyo">
+    <meta name="description" content="Neuroevolution, Multi-core, Many-core, GPU">
+    <meta name="author" content="Edmore Moyo">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" href="../css/reveal.min.css">
-		<link rel="stylesheet" href="../css/theme/beige.css">
+    <link rel="stylesheet" href="../css/reveal.min.css">
+    <link rel="stylesheet" href="../css/theme/beige.css">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../lib/css/zenburn.css">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-</head>
-<body>
-<div class="reveal">
-    <div class="slides">
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
         <section>
           <h1>Accelerated Neuroevolution on Core Architectures</h1>
           <br>
           <h3><span style="color:white; background-color:black">Edmore Moyo</span></h3>
           <h3>Supervisors : Michelle Kuttel / Geoff Nitschke</h2>
-          <h3>29 May 2013</h2>
-        </section>
-<!-- Evolution / Genetic Algorithms -->
-        <section>
-        <section>
-          <h1>
-         <span style="color:white; opacity:0.4">Neuro</span>
-         <span style="color: #8b743d">evolution</span>
-         </h1>
-        </section>
-        <section>
-          <h2>Evolution ...</h2>
-          <blockquote>... is the change in the inherited characteristics of biological populations over successive generations.</blockquote>
-              <p><small>~ Wikipedia</small></p>
-          <img src="images/homer_evolution.png"></img>
-        </section>
-        <section>
-        <h2>Genetic Algorithms</h2>
-        <blockquote>In the computer science field of artificial intelligence, a genetic algorithm (GA) is a search heuristic that mimics the process of natural evolution.</blockquote>
-        <p><small>~ Wikipedia</small></p>
-        </section>
-
-       <section>
-<h2>Genetic Algorithm</h2>
-<img src="images/genetic_algorithm.png">
+<h3>29 May 2013</h2>
 </section>
-        </section>
+<!-- Evolution / Genetic Algorithms -->
+<section>
+  <section>
+    <h1>
+      <span style="color:white; opacity:0.4">Neuro</span>
+      <span style="color: #8b743d">evolution</span>
+    </h1>
+  </section>
+  <section>
+    <h2>Evolution ...</h2>
+    <blockquote>... is the change in the inherited characteristics of biological populations over successive generations.</blockquote>
+    <p><small>~ Wikipedia</small></p>
+    <img src="images/homer_evolution.png"></img>
+  </section>
+  <section>
+    <h2>Genetic Algorithms</h2>
+    <blockquote>In the computer science field of artificial intelligence, a genetic algorithm (GA) is a search heuristic that mimics the process of natural evolution.</blockquote>
+    <p><small>~ Wikipedia</small></p>
+  </section>
+
+  <section>
+    <h2>Genetic Algorithm</h2>
+    <img src="images/genetic_algorithm.png">
+  </section>
+</section>
 
 <!-- Neural Networks  -->
-        <section>
-        <section>
-          <h1>
-         <span style="color:#8b743d">Neuro</span>
-         <span style="color:white; opacity:0.4">evolution</span>
-         </h1>
-        </section>
-        <section>
-          <h2>Biological Neural Networks</h2>
-          <blockquote>The human brain can be described as a biological neural
-network, as it is an interconnected web of neurons.</blockquote>
-<img src="images/neuron.png"></img>
-        </section>
-        <section>
-        <h2>Artificial Neural Networks</h2>
-        <blockquote>Artificial neural networks are based on the parallel architecture of animal brains and are used for modeling complex relationships
-between inputs and outputs or to find patterns in
-data.</blockquote>
-        </section>
-        <section>
-        <h2>Perceptrons</h2>
-<ul>
-<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">The simplest neural network possible is a computational model of a single neuron called a perceptron.</span></h3>
-<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A perceptron can only solve linearly seperable problems e.g. cannot solve XOR.</span></h3>
-    </ul>
-    </section>
-
 <section>
-        <h2>Multi-layered Perceptrons</h2>
-<ul>
-<h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A multi-layered perceptron is a network of perceptrons. </span></h3>
+  <section>
+    <h1>
+      <span style="color:#8b743d">Neuro</span>
+      <span style="color:white; opacity:0.4">evolution</span>
+    </h1>
+  </section>
+  <section>
+    <h2>Biological Neural Networks</h2>
+    <blockquote>The human brain can be described as a biological neural
+      network, as it is an interconnected web of neurons.</blockquote>
+    <img src="images/neuron.png"></img>
+  </section>
+  <section>
+    <h2>Artificial Neural Networks</h2>
+    <blockquote>Artificial neural networks are based on the parallel architecture of animal brains and are used for modeling complex relationships
+      between inputs and outputs or to find patterns in
+      data.</blockquote>
+  </section>
+  <section>
+    <h2>Perceptrons</h2>
+    <ul>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">The simplest neural network possible is a computational model of a single neuron called a perceptron.</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A perceptron can only solve linearly seperable problems e.g. cannot solve XOR.</span></h3>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Multi-layered Perceptrons</h2>
+    <ul>
+      <h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">A multi-layered perceptron is a network of perceptrons. </span></h3>
 <center><img src="images/ann.svg" class="fragment"></img></center>
 <h4 class="fragment"><span style="color:white; background-color:black; line-height:1.2">It can learn to solve more complicated problems</span></h3>
+</ul>
+</section>
+
+<section>
+  <h2>The key element of Neural Networks ?</h2>
+  <h3 class="fragment"><span style="color:white; background-color:black">They have the ability to learn</span></h3>
+
+</section>
+<section>
+  <h2>Classes of Learning Systems</h2>
+  <h3 class="fragment"><span style="color:white; background-color:black">Supervised Learning</span></h3><br>
+  <h3 class="fragment"><span style="color:white; background-color:black">UnSupervised Learning</span></h3><br>
+  <h3 class="fragment"><span style="color:white; background-color:black">Reinforcement Learning</span></h3><br>
+</section>
+<section>
+  <h2>Reinforcement Learning Systems</h2>
+  <blockquote>Reinforcement learning is learning what to do--how to map situations to actions--so as to maximize a numerical reward signal.</blockquote>
+  <img src="images/mouse_in_maze.jpg"></img>
+</section>
+
+<section>
+  <h2>Uses of neural networks?</h2>
+  <ul>
+    <h3 class="fragment"><span style="color:white; background-color:black">Pattern recognition</span></h3><br>
+    <h3 class="fragment"><span style="color:white; background-color:black">Time Series Prediction</span></h3><br>
+    <h3 class="fragment"><span style="color:white; background-color:black">Robotics</span></h3><br>
+    <h3 class="fragment"><span style="color:white; background-color:black">Control</span></h3><br>
+  </ul>
+</section>
+
+</section>
+
+<section>
+  <section>
+    <h1>Neuroevolution</h1>
+    <blockquote>Neuroevolution (NE) is a method for modifying neural
+      network weights, topologies, or ensembles, with a genetic
+      algorithm, in order for the network to learn a specific
+      task</blockquote>
+    <p><small>~ Risto Miikkulainen</small></p>
+  </section>
+
+  <section>
+    <h2>NE is an evolutionary reinforcement learning system.</h2>
+  </section>
+
+  <section>
+    <h2>Examples of NE methods</h2>
+    <ul >
+      <h3 class="fragment"><span style="color:white; background-color:black">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black">Enforced Sub-populations (ESP)</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black">Neuroevolution Augmenting Topologies (NEAT)</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black">Potter and De Jong</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black">Multi-Component ESP</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black">... and many more</span></h3>
     </ul>
-    </section>
+  </section>
 
-        <section>
-        <h2>The key element of Neural Networks ?</h2>
-            <h3 class="fragment"><span style="color:white; background-color:black">They have the ability to learn</span></h3>
+  <section>
+    <h2>Examples of population based NE methods</h2>
+    <ul>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">Enforced Sub-populations (ESP)</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">Potter and De Jong</span></h3>
+    </ul>
+  </section>
 
-        </section>
-        <section>
-        <h2>Classes of Learning Systems</h2>
-            <h3 class="fragment"><span style="color:white; background-color:black">Supervised Learning</span></h3><br>
-            <h3 class="fragment"><span style="color:white; background-color:black">UnSupervised Learning</span></h3><br>
-            <h3 class="fragment"><span style="color:white; background-color:black">Reinforcement Learning</span></h3><br>
-        </section>
-        <section>
-        <h2>Reinforcement Learning Systems</h2>
-        <blockquote>Reinforcement learning is learning what to do--how to map situations to actions--so as to maximize a numerical reward signal.</blockquote>
-        <img src="images/mouse_in_maze.jpg"></img>
-        </section>
-<section>
-<h2>Uses of neural networks?</h2>
-<ul>
-            <h3 class="fragment"><span style="color:white; background-color:black">Robotics</span></h3><br>
-<h3 class="fragment"><span style="color:white; background-color:black">Pattern recognition</span></h3><br>
-            <h3 class="fragment"><span style="color:white; background-color:black">Time Series Prediction</span></h3><br>
-            <h3 class="fragment"><span style="color:white; background-color:black">Control</span></h3><br>
-</ul>
-</section>
-        </section>
+  <section>
+    <h2>Enforced Sub-populations (ESP)</h2>
+    <img src="images/esp.png"></img>
+  </section>
 
-<section>
-        <section>
-<h1>Neuroevolution</h1>
-        <blockquote>Neuroevolution (NE) is a method for modifying neural
-network weights, topologies, or ensembles, with a genetic
-algorithm, in order for the network to learn a specific
-task</blockquote>
-        <p><small>~ Risto Miikkulainen</small></p>
-</section>
+  <section>
+    <h2>Cooperative Coevolution</h2>
+    <ul>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">The ESP method can be extended to evolving multiple networks simultaneously, and applied to multi-agent problem solving tasks.</span></h3>
+      <h3 class="fragment"><span style="color:white; background-color:black; line-height:1.2">Multi-agent neuroevolution is a promising approach for complex real-world tasks.</span></h3>
+    </ul>
 
-<section>
-<h2>NE is an evolutionary reinforcement learning system.</h2>
-</section>
-
-<section>
-<h2>Examples of NE methods</h2>
-<ul>
-<h3 class="fragment"><span style="color:white; background-color:black">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Enforced Sub-populations (ESP)</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Neuroevolution Augmenting Topologies (NEAT)</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Potter and De Jong</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Multi-Component ESP</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">... and many more</span></h3>
-</ul>
-</section>
-
-<section>
-<h2>Examples of population based NE methods</h2>
-<ul>
-<h3 class="fragment"><span style="color:white; background-color:black">Symbiotic Adaptive Neuroevolution (SANE)</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Enforced Sub-populations (ESP)</span></h3>
-<h3 class="fragment"><span style="color:white; background-color:black">Potter and De Jong</span></h3>
-</ul>
-</section>
-
-<section>
-<h2>Enforced Sub-populations (ESP)</h2>
-<img src="images/esp.png"></img>
-</section>
-
-<section>
-<h2>Cooperative Coevolution</h2>
-</section>
+  </section>
 
 </section>
 
 
 <section>
 
-<section>
-<h1>Core Architectures</h1>
-<ul>
-            <h2 class="fragment"><span style="color:white; background-color:black">Parallelism</span></h3>
+  <section>
+    <h1>Core Architectures</h1>
+    <ul>
+      <h2 class="fragment"><span style="color:white; background-color:black">Parallelism</span></h2>
 <br>
-            <h2 class="fragment"><span style="color:white; background-color:black">Concurrency</span></h3>
+<h2 class="fragment"><span style="color:white; background-color:black">Concurrency</span></h2>
 
 </ul>
 </section>
 
 <section>
-<h1>Parallelism</h1>
-<ul>
-            <h2 class="fragment"><span style="color:white; background-color:black">Multi-core</span></h3>
+  <h1>Parallelism</h1>
+  <ul>
+    <h2 class="fragment"><span style="color:white; background-color:black">Multi-core</span></h2>
 <br>
-            <h2 class="fragment"><span style="color:white; background-color:black">Many-core</span></h3>
+<h2 class="fragment"><span style="color:white; background-color:black">Many-core</span></h2>
 
 </ul>
 </section>
 
 <section>
-<h1>Multi-core</h1>
+  <h1>Multi-core</h1>
+  <ul>
+  </ul>
+</section>
+
+<section>
+  <h1>Many-core</h1>
+  <ul>
+  </ul>
+</section>
+
+<section>
+  <h1>Concurrency</h1>
+  <blockquote>Concurrency is powerful.<br>
+    Concurrency is not parallelism.<br>
+    Concurrency enables parallelism.</br>
+    Concurrency makes parallelism (and scaling and everything else) easy.</br>
+    <p><small>~ Rob Pike</small></p>
+  </blockquote>
+</section>
+
+<section>
+  <h1>Go</h1>
+  <ul>
+    <img src="images/gopher.png"></img>
+  </ul>
+</section>
+
+<section>
+  <h1>What is Go?</h1>
+  <ul>
+    <h4 ><span style="color:white; background-color:black"> open source</span></h4>
+    <h4 ><span style="color:white; background-color:black"> closely based on C.A.R HOARE'S CSP</span></h4>
+    <h4 ><span style="color:white; background-color:black"> built in concurrency - goroutines and channels</span></h4>
+    <h4 ><span style="color:white; background-color:black"> garbage collected</span></h4>
+    <h4 ><span style="color:white; background-color:black"> easy to program in - C like</span></h4>
+    <h4 ><span style="color:white; background-color:black"> statically typed with fast compilation</span></h4>
+    <h4 ><span style="color:white; background-color:black"> </span></h4>
+    <h4 ><span style="color:white; background-color:black"> ... It also has a pretty cool mascot!</span></h4>
+  </ul>
+</section>
+
+</section>
+
+<section>
+
+<section>
+  <h1>What do we already know?</h1>
+</section>
+
+<section>
+<h2>
+<blockquote>Is there a future for ANN hardware?</blockquote>
+</h2>
+    <p><small>~ Cabestany et al.</small></p>
+</section>
+
+<section>
+  <h3>There have been attempts to speed up the training of neural networks through parallelisation</h3>
 <ul>
-</ul>
-</section>
-
-<section>
-<h1>Many-core</h1>
+<h4><span style="color:white; background-color:black;line-height:1.0">Most published work is on Field Programmable Gate Arrays (FPGAs)</span></h4>
+<h4><span style="color:white; background-color:black; line-height:1.0 ">It has been stated that FPGA implementations of ANNs, with a large number of neurons is "challenging", because of the multiplication intensive nature of ANNs</span></h4>
 <ul>
-</ul>
 </section>
 
 <section>
-<h1>Concurrency</h1>
-<blockquote>Concurrency is powerful.<br>
-Concurrency is not parallelism.<br>
-Concurrency enables parallelism.</br>
-Concurrency makes parallelism (and scaling and everything else) easy.</br>
-<p><small>~ Rob Pike</small></p>
-</blockquote>
-</section>
+  <h3>Suggestions have been made for more "hardware-friendly" algorithms to be developed</h3>
 
-<section>
-<h1>Go</h1>
 <ul>
-<img src="images/gopher.png"></img>
+<h4><span style="color:white; background-color:black;line-height:1.0">There is published work on the parallelisation of genetic algorithms using MapReduce.</span></h4>
 </ul>
+
+<div class="fragment">
+<blockquote>MapReduce is a programming model and an associated implementation for processing and generating large data sets.</blockquote>
+    <p><small>~ Google</small></p>
+<div>
+</section>
+
+  <section>
+    <h2>To our knowledge, there is no published work on accelerating the NE Method ESP through parallelisation, on multi-core or many-core architectures.</h2>
+  </section>
+
+<section>
+<h2>But why would we want to accelerate neuroevolution?</h2>
 </section>
 
 </section>
 
 <section>
-<h1>What do we already know?</h1>
-</section>
+  <section>
+    <h1>How will this study contribute?</h1>
+  </section>
 
-<section>
-<section>
-<h1>How will this study contribute?</h1>
-</section>
+  <section>
+    <h2>Aims</h2>
+    <h3><span style="color:white; background-color:black;line-height:1.0">The aim of this study is to accelerate neuroevolution by parallelisation of the ESP method</span></h3>
+  </section>
 
-<section>
-<h2>Aims</h2>
-</section>
+  <section>
+    <h2>Research Questions</h2>
+<ul>
+<h3><span style="color:white; background-color:black;line-height:1.0" class="fragment">Is it possible to develop an efficient, scalable, parallel implementation of the ESP method?</span></h3>
+<h3><span style="color:white; background-color:black;line-height:1.0" class="fragment">Can the ESP algorithm be expressed and parallelised using the MapReduce Model?</span></h3>
+<h3><span style="color:white; background-color:black;line-height:1.0" class="fragment">Is the implementation portable?</span></h3>
+</ul>
+  </section>
 
-<section>
-<h2>Research Questions</h2>
-</section>
+  <section>
+    <h2>Approach</h2>
+  </section>
 
-<section>
-<h2>Approach</h2>
-</section>
+  <section>
+    <h2>Testing and Evaluation</h2>
+  </section>
 
-<section>
-<h2>Testing and Evaluation</h2>
-</section>
-
-<section>
-<h2>Milestones</h2>
-</section>
+  <section>
+    <h2>Key Milestones</h2>
+  </section>
 
 </section>
 
 <!-- References -->
-        <section>
-        <h2>References</h2>
-        <ul>
-          <li>http://www.ironammonite.com/2011/05/top-5-evolution-in-minute-videos-on-tv_19.html</li>
-<li>http://natureofcode.com/book/</li>
-<li>http://www.nextnature.net/2010/01/as-smart-as-mice/</li>
-<li>http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node7.html</li>
-<li>http://en.wikipedia.org/wiki/File:Neural_network_example.svg</li>
-<li>http://www.cs.utexas.edu/users/nn/pages/research/neuroevolution.html</li>
-        <li>http://tip.golang.org/doc/gopher/</li>
-</li>http://talks.golang.org/2012/waza.slide#58</li>
-</ul>
-        </section>
+<section>
+  <h2>References</h2>
+  <ul style="font-size:0.5em">
+    <li>http://www.ironammonite.com/2011/05/top-5-evolution-in-minute-videos-on-tv_19.html</li>
+    <li>http://natureofcode.com/book/</li>
+    <li>http://www.nextnature.net/2010/01/as-smart-as-mice/</li>
+    <li>http://webdocs.cs.ualberta.ca/~sutton/book/ebook/node7.html</li>
+    <li>http://en.wikipedia.org/wiki/File:Neural_network_example.svg</li>
+    <li>http://www.cs.utexas.edu/users/nn/pages/research/neuroevolution.html</li>
+    <li>http://tip.golang.org/doc/gopher/</li>
+    <li>http://talks.golang.org/2012/waza.slide#58</li>
+    <li>http://golang.org</li>
+<li>http://research.google.com/archive/mapreduce.html</li>
+<li>J Cabestany, P Ienne, J M Moreno, and J Madrenas. Is there a future for ann hardware? 1996.</li>
+<li>Perry Moerland and Emile Fiesler. Neural Network Adaptations to Hardware Implementations. 1997.</li>
+<li>Jihan Zhu and Peter Sutton. FPGA Implementa- tions of Neural Networks - a Survey of a Decade of Progress A Taxonomy of FPGA Implementations of ANNs. pages 1–4, 2003.</li>
+  </ul>
+</section>
 
-        <section>
-        <h1>The End</h1>
-        <p><h3>By</h3></p>
-        <p><h3> Edmore Moyo / @etmoyo / edmoremoyo.com</h3></p>
-        <p><a href="https://github.com/edmore/edmorepresents/tree/master/public/slides/NE">Source code on github</a></p>
-        </section>
-    </div>
+<section>
+  <h1>The End</h1>
+  <p><h3>By</h3></p>
+  <p><h3> Edmore Moyo / @etmoyo / edmoremoyo.com</h3></p>
+  <p><a href="https://github.com/edmore/edmorepresents/tree/master/public/slides/NE">Source code on github</a></p>
+</section>
+</div>
 
-			<!-- Presentation progress bar -->
-			<div class="progress"><span></span></div>
+<!-- Presentation progress bar -->
+<div class="progress"><span></span></div>
 
-		</div>
+</div>
 </div>
 <script src="../lib/js/head.min.js"></script>
-		<script src="../js/reveal.min.js"></script>
+<script src="../js/reveal.min.js"></script>
 
-		<script>
+<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				transition: 'default'
-			});
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  transition: 'default'
+  });
 
-		</script>
+</script>
 </body>
 </html>
 
