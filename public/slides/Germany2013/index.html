@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Tools / Software / Workflows to support Matterhorn <br>Installations</title>
+
+    <meta name="description" content="Matterhorn">
+    <meta name="author" content="CET, Edmore Moyo, Genevieve Chang, David Horwitz, Stephen Marquard ">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/reveal.min.css">
+    <link rel="stylesheet" href="../css/theme/sky.uct.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Tools / Software / Workflows to support Matterhorn Installations</h2>
+          <br>
+          <h3><span style="color:white; background-color:black; line-height:1.0">Centre for Educational <br>Technology (UCT)</span></h3>
+          <h3>24 June 2013</h3>
+
+      </section>
+
+<section>
+<section>
+  <h3>
+    <span style="font-weight: bold">Current installation</span>
+  </h3>
+  <ul style="line-height: 2.0">
+    <li>4 SLES VM instances (1 admin node, 1 Red5 streaming server, 2 worker nodes)</li>
+    <li>23 equipped lecture venues (Small Dell CAs running Ubuntu)</li>
+    <li>Mysql5 database</li>
+    <li>Storage on NetApp</li>
+  </ul>
+</section>
+
+</section>
+
+
+<section>
+  <section>
+    <h3>
+      <span style="font-weight: bold">Semester 1 (2013) - Stats</span>
+    </h3>
+    <ul >
+      <li>Recorded Venues - 17</li>
+      <li>Lecture Series - 28</li>
+      <li>Lectures Published - 655</li>
+      <li>Average Recordings / week - 52</li>
+    </ul>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Future Plans</h2>
+  </section>
+
+  <section>
+  <h3>Possible scale-up to 179 venues!</h3>
+    <img src="images/matterhorn_on_fire_small.jpg"></img>
+  </section>
+
+</section>
+
+<section>
+<h3>How do we efficiently scale-up and maintain our Matterhorn deployment?</h3>
+<ul>
+<li class="fragment" style="font-weight:bold">Good software / tools</li>
+<li class="fragment" style="font-weight:bold">Good workflows</li>
+</ul>
+</section>
+
+<section>
+<section>
+<h2>Our software / tools / workflows</h2>
+</section>
+
+<section>
+<h3>Sakai - Matterhorn Integration</h3>
+<img src="images/sakai_matterhorn_small.png"></img>
+</section>
+
+<section>
+<h3>JIRA driven development</h3>
+</section>
+
+<section>
+<h3>Reporting</h3>
+<ul>
+<li>Semester Statistics in Excel</li>
+</ul>
+</section>
+
+<section>
+<h3>Monitoring Tools</h3>
+<ul>
+<li>Scripts used to generate our monitoring graphs (Perl)</li>
+<li>IP Camera dashboard (in Ruby)</li>
+</ul>
+<img src="images/ip_camera_snapshot_small.png"></img>
+</section>
+
+<section>
+<h3>Server / CA Load</h3>
+<ul><li>Cacti - used to monitor load on admin, worker nodes and capture agents</li></ul>
+</section>
+
+<section>
+<h3>Alerts</h3>
+<ul>
+<li>Perl scripts used to notify admins when CAs are down</li>
+<li>Sintrex emails sent when there are issues with CAs or IP cameras</li>
+</ul>
+</section>
+
+<section>
+<h3>Deployments</h3>
+<ul>
+<li>Custom Ubuntu CD using preseeding for capture agents</li>
+<li>Bash build script for admin nodes</li>
+</ul>
+</section>
+
+<section>
+<h3>Recording schedule</h3>
+<img src="images/calendar_schedule_small.png"></img>
+</section>
+
+<section>
+<h3>Configuration Management</h3>
+<ul>
+<li>Chef?</li>
+<li>Puppet?</li>
+<li>Ansible?</li>
+</ul>
+</section>
+
+<section>
+<h3>Workflows</h3>
+<ul>
+<li>Proactive</li>
+<li>Reactive</li>
+</ul>
+</section>
+
+<section>
+<h3>Emerging Technologies?</h3>
+</section>
+
+</section>
+
+<section>
+
+<section>
+<h2>Your software / tools / workflows ?</h2>
+</section>
+
+<section>
+<ul>
+<li>LTI Integration</li>
+<li>JIRA Driven Development</li>
+<li>Reporting</li>
+<li>Monitoring Tools</li>
+<li>Server / CA Load</li>
+<li>Alerts</li>
+<li>Deployments</li>
+<li>Recording Schedule</li>
+<li>Configuration Management</li>
+<li>Workflows</li>
+<li>Emerging Technologies</li>
+</ul>
+</section>
+
+</section>
+<!-- References -->
+<section>
+  <h2>Credits</h2>
+  <ul style="font-size: 0.8em">
+<li>http://www.bigpicture.in/40-mind-blowing-nature-photos-by-katarina-stefanovic</li>
+<li>Stephen Marquard / Roger Brown / David Horwitz / Lubabalo Badi / Genevieve Chang / LT Team </li>
+  </ul>
+</section>
+
+<section>
+  <h1>The End</h1>
+  <p>Presented by</p>
+  <p>Edmore Moyo / @etmoyo / edmoremoyo.com</p>
+  <p>On behalf of</p>
+<img src="images/cet_logo_small.jpg"></img>
+  <p><a href="https://github.com/edmore/edmorepresents/tree/master/public/slides/Germany2013">Source code on github</a></p>
+</section>
+</div>
+
+<!-- Presentation progress bar -->
+<div class="progress"><span></span></div>
+
+</div>
+</div>
+<script src="../lib/js/head.min.js"></script>
+<script src="../js/reveal.min.js"></script>
+
+<script>
+
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  transition: 'default'
+  });
+
+</script>
+</body>
+</html>
+
