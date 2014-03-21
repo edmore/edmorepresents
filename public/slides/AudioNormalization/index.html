@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Scheduling and Recordings Management via LTI</title>
+    <title>How to normalize audio</title>
 
-    <meta name="description" content="Neuroevolution, Multi-core, Many-core, GPU">
+    <meta name="description" content="audio normalization">
     <meta name="author" content="Edmore Moyo">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Scheduling and Recordings Management via LTI</h1>
+          <h1>How to normalize audio</h1>
           <br>
           <em>Edmore Moyo ( CILT, UCT )</em><br><br>
           <h3>Harvard University, Opencast Unconference</h3>
@@ -41,66 +41,81 @@
 
 <section>
   <section>
-    <h2>Learning Tools Interoperability</h2>
-    <blockquote style="line-height:1.5">The principal concept of LTI is to establish a standard way of integrating rich learning applications with platforms like learning management systems, portals, or other educational environments.</blockquote>
-    <p><small>~ http://www.imsglobal.org/toolsinteroperability2.cfm</small></p>
+    <h2>Audio normalization</h2>
+    <blockquote style="line-height:1.5">Audio normalization is the application of a constant amount of gain to an audio recording to bring the average or peak amplitude to a target level (the norm).</blockquote>
+    <p><small>~ Wikipedia</small></p>
   </section>
 </section>
 
 <section>
-    <h2>UCT's Integration ...</h2>
-    <ul>
-      <li> Vula (Sakai Instance) and Matterhorn</li>
-      <img src="images/sakai_matterhorn_small.png"><img>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Recordings Management</h2>
-      <img src="images/recordings_management.png"><img>
-  </section>
-
-  <section>
-  <section>
-    <h2>Scheduling of Recordings</h2>
-      <img src="images/scheduling_recordings.png"><img>
-  </section>
-
-  <section>
-    <h2>Scheduling of Recordings</h2>
-      <img src="images/scheduling_recordings_2.png"><img>
-  </section>
-
+<h2>Why normalize?</h2>
+<img src="images/too_loud.jpeg"></img>
 </section>
 
-  <section>
-    <h2>How did we do it?</h2>
-    <ul>
-      <li>"Trusted User" mode of LTI (MH-8316)</li>
-      <li>Sakai UserProvider - http://bit.ly/1nGohcI</li>
-      <li>UI Customisation</li>
-    </ul>
+<section>
+    <h1>Entwine + UCT</h1>
+  </section>
+
+<section>
+    <h1>MH-6386</h1>
+  </section>
+
+<section>
+    <h1>Dependencies</h1>
+<ul>
+<li>SOX</li>
+<li>For our case we compiled SOX with flac support</li>
+<li>Change needs to be made to <em>config.properties</em></li>
+</ul>
+<blockquote>
+org.opencastproject.sox.path=/usr/local/bin/sox
+</blockquote>
+  </section>
+
+<section>
+<section>
+    <h1>Audio Analysis</h1>
+<img src="images/analyze_audio.png"></img>
+  </section>
+
+<section>
+    <h1>Audio Analysis</h1>
+<ul>
+<li>Values analysed : <em>"RMS Lev dB", "Peak Lev dB" and "RMS peak dB".</em></li>
+<li>Command run : <em>sox audio.flac -n remix - stats</em></li>
+<li>Values added to the track's audio metadata</li>
+</ul>
+</section>
 </section>
 
-  <section>
-    <h2>Different schools of thought</h2>
-    <ul>
-      <li>Was LTI really meant for this kind of use case? or simply read only access?</li>
-      <li>More standard solution: What about persisiting users into the DB instead? (MH-8955)</li>
-      <li>Would the resolution of MH-8955 come with added user management complexity? - mapping to one matterhorn user?</li>
-    </ul>
+<section>
+<section>
+    <h1>Audio Normalization</h1>
+<img src="images/normalize_audio.png"></img>
+  </section>
+<section>
+    <h1>Audio Normalization</h1>
+<img src="images/normalized_audio.png"></img>
+  </section>
 </section>
 
-  <section>
-    <h2>We would love to hear about your approach.</h2>
-</section>
+
+
 
   <section>
     <h2>Useful Links</h2>
     <ul>
-      <span>UCT LTI tools :</span><br>
-<span><a href="http://bit.ly/1eVq44g">http://bit.ly/1eVq44g</a></span>
+      <li><a>http://entwinemedia.com/2013/matterhorn-audio-leveling-service</a></li>
+<li><a>https://opencast.jira.com/wiki/display/MH/SoxService</a></li>
+<li><a>http://opencast.3480289.n2.nabble.com/Implementation-of-audio-normalization-td7583662.html</a></li>
     </ul>
+</section>
+
+<section>
+    <h2>Credits</h2>
+<ul>
+<li><a>http://t0.gstatic.com/images?q=tbn:ANd9GcSCeb2lWI28f-EnC6hIZBQtfs0iQWLoZY7FSJCgtu_JC462AIff</a></li>
+</ul>
 </section>
 
 <section>
